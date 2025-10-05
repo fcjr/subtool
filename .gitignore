@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Subtitle and video output files
+*.srt
+*.ass
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov

@@ -1,0 +1,31 @@
+[project]
+name = "lsub"
+version = "0.0.0" # Updated by github action
+description = "Local subtitle generation and translation CLI using Whisper and NLLB-200"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Frank Chiarulli Jr."}]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "openai-whisper>=20231117",
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "sentencepiece>=0.1.99",
+    "ffmpeg-python>=0.2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/fcjr/lsub"
+Issues = "https://github.com/fcjr/lsub/issues"
+
+[project.scripts]
+lsub = "lsub:main"
+
+[tool.uv]
+package = true
