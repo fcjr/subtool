@@ -1,5 +1,5 @@
 [project]
-name = "lsub"
+name = "subtool"
 version = "0.0.0" # Updated by github action
 description = "Local subtitle generation and translation CLI using Whisper and NLLB-200"
 readme = "README.md"
@@ -21,11 +21,11 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/fcjr/lsub"
-Issues = "https://github.com/fcjr/lsub/issues"
+Repository = "https://github.com/fcjr/subtool"
+Issues = "https://github.com/fcjr/subtool/issues"
 
 [project.scripts]
-lsub = "lsub:main"
+subtool = "subtool:main"
 
 [tool.uv]
 package = true

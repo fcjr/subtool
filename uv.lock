@@ -671,7 +671,7 @@ wheels = [
 ]
 
 [[package]]
-name = "subtitle"
+name = "subtool"
 version = "0.0.0"
 source = { editable = "." }
 dependencies = [
