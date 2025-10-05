@@ -1,12 +1,12 @@
-# lsub
+# subtool
 
 > Local AI-powered subtitle generation and translation
 
-[![PyPI Version](https://img.shields.io/pypi/v/lsub)](https://pypi.org/project/lsub/)
-[![Python Versions](https://img.shields.io/pypi/pyversions/lsub)](https://pypi.org/project/lsub/)
-[![License](https://img.shields.io/pypi/l/lsub)](LICENSE)
+[![PyPI Version](https://img.shields.io/pypi/v/subtool)](https://pypi.org/project/subtool/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/subtool)](https://pypi.org/project/subtool/)
+[![License](https://img.shields.io/pypi/l/subtool)](LICENSE)
 [![UV Friendly](https://img.shields.io/badge/uv-friendly-5A2DAA)](https://docs.astral.sh/uv/)
-[![CI Publish](https://img.shields.io/github/actions/workflow/status/fcjr/lsub/publish.yml?label=publish)](https://github.com/fcjr/lsub/actions/workflows/publish.yml)
+[![CI Publish](https://img.shields.io/github/actions/workflow/status/fcjr/subtool/publish.yml?label=publish)](https://github.com/fcjr/subtool/actions/workflows/publish.yml)
 
 Extract and translate video subtitles using [Whisper](https://github.com/openai/whisper) and [NLLB-200](https://huggingface.co/facebook/nllb-200-distilled-600M).
 
@@ -23,44 +23,44 @@ Extract and translate video subtitles using [Whisper](https://github.com/openai/
 Recommended (fast, reproducible):
 
 ```bash
-uv tool install lsub
+uv tool install subtool
 ```
 
 Run without installing:
 
 ```bash
-uvx lsub video.mp4 -t en es
+uvx subtool video.mp4 -t en es
 ```
 
 With pip:
 
 ```bash
-pip install lsub
+pip install subtool
 ```
 
 ## Usage
 
 ```bash
 # Basic usage - extract subtitles (auto-detect language)
-lsub video.mp4
+subtool video.mp4
 
 # Extract and translate to English and Spanish
-lsub video.mp4 -t en es
+subtool video.mp4 -t en es
 
 # Specify source language explicitly
-lsub video.mp4 -l zh -t en
+subtool video.mp4 -l zh -t en
 
 # Use different Whisper model (default: turbo)
-lsub video.mp4 -m large -t en
+subtool video.mp4 -m large -t en
 
 # Output as MKV (better subtitle support for Unicode/CJK)
-lsub video.mp4 -t en zh -f mkv
+subtool video.mp4 -t en zh -f mkv
 
 # Generate SRT files only (no embedding)
-lsub video.mp4 -t en es --srt-only
+subtool video.mp4 -t en es --srt-only
 
 # Custom output path
-lsub video.mp4 -t en -o output_with_subs.mp4
+subtool video.mp4 -t en -o output_with_subs.mp4
 ```
 
 ## Supported Languages
@@ -102,7 +102,7 @@ MKV uses ASS format with embedded font information for proper CJK character rend
 
 ```bash
 uv sync
-uv run lsub video.mp4 -t en     # run the CLI using local code
+uv run subtool video.mp4 -t en     # run the CLI using local code
 
 # optional: editable install
 uv pip install -e .
